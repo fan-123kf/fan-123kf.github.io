@@ -105,19 +105,19 @@
        
   <p>网站大概每天都会登录维护，之前出了太多bug。<br>现在还是有这种情况，视频偶尔回播放失败qwq<br>长了教训，现在的操作都会写在更新日志里，本地和GitHub各一份，以防以后忘记<span id="more"></span></p>
 <p>开头感谢：<br>b站程序羊<br>github大佬 shen-yu</p>
-<p>#####2022/2/10<br>视频一天失效了好几次，太难搞了。我推测是服务器的原因，也就先不搞了。</p>
+<p><strong>2022/2/10</strong><br>视频一天失效了好几次，太难搞了。我推测是服务器的原因，也就先不搞了。</p>
 <p>我还是弄明白了。<br>视频失效原因是，用dplayer插入的url是视频解析地址，<br>在从网页源码爬解析地址的时候，url里会加入一些参数构成防盗链。<br>防止移植，并且不定时使源码失效，导致视频频繁失效。<br>解决办法是，在首次解析视频时就把视频下载到本地。<br>然后上传到自建的云空间里，我选择了阿里云oss<br>在阿里云对象存储里买了半年的空间，在华北2建立一个bucket<br>然后从本地上传视频到oss，在文件acl里修改权限，从而去除掉防盗链的时间参数。<br>然后复制过url即可。不出意外的话，应该再也不会失效了。<br>而且没有水印。d=====(￣▽￣*)b</p>
-<p>#####2022/2/9<br>加了top插件，没时间倒腾它了，把时间得放在准备蓝桥杯上了，真没意思<br>我半夜醒了 梦到上帝惩罚我写markdown不用typroa 赶紧下载了一个<br>睡觉</p>
-<p>#####2022/2/8<br>添加了几个视频</p>
-<p>#####2022/2/7<br>再也不在github上传大文件了。github是放代码的！github是放代码的！github是放代码的！<br>视频的上传也从本地改为云端，千辛万苦视频解析，费劲。</p>
+<p><strong>2022/2/9</strong><br>加了top插件，没时间倒腾它了，把时间得放在准备蓝桥杯上了，真没意思<br>我半夜醒了 梦到上帝惩罚我写markdown不用typroa 赶紧下载了一个<br>睡觉</p>
+<p><strong>2022/2/8</strong><br>添加了几个视频</p>
+<p><strong>2022/2/7</strong><br>再也不在github上传大文件了。github是放代码的！github是放代码的！github是放代码的！<br>视频的上传也从本地改为云端，千辛万苦视频解析，费劲。</p>
 <p>使用了dplayer插件，确实好用，在云端的视频能像本地一样纯净，还至少都是超清的。</p>
 <p>把GitHub库里的视频删掉了，全都换成dplayer播放，真香。</p>
-<p>#####2022/2/6<br>把blog文件夹直接删掉了，重新来了一个myblog文件夹。<br>在推倒重来的过程中遇到git not found 只需在myblog页面执行以下命令<br>cnpm install hexo-deployer-git –-save<br>以后不能再word上记录，word会自动修正一些符号和缩进，导致出现莫名的错误</p>
+<p><strong>2022/2/6</strong><br>把blog文件夹直接删掉了，重新来了一个myblog文件夹。<br>在推倒重来的过程中遇到git not found 只需在myblog页面执行以下命令<br>cnpm install hexo-deployer-git –-save<br>以后不能再word上记录，word会自动修正一些符号和缩进，导致出现莫名的错误</p>
 <p>成功进行推送了知足.mp4  然后GitHub又崩了，他娘的</p>
 <p>出现各种奇奇怪怪的错误</p>
-<p>#####2022/2/5<br>我遇到了困难，花了11个g的流量还是没有搞定</p>
-<p>#####2022/2/4<br>在hexo上添加本地视频文件<br>参考网站在Hexo中用Markdown添加网络或本地视频以及GIF动图 | UltraFisher</p>
-<p>#####2022/2/3<br>在hexo d 之前，要输入两行命令<br>git config –-global user.email”youremail”<br>git config –-global user.name”yourname”</p>
+<p><strong>2022/2/5</strong><br>我遇到了困难，花了11个g的流量还是没有搞定</p>
+<p><strong>2022/2/4</strong><br>在hexo上添加本地视频文件<br>参考网站在Hexo中用Markdown添加网络或本地视频以及GIF动图 | UltraFisher</p>
+<p><strong>2022/2/3</strong><br>在hexo d 之前，要输入两行命令<br>git config –-global user.email”youremail”<br>git config –-global user.name”yourname”</p>
 <p>将ssh加入密钥之后不用再写了，吊</p>
 <p>connection was reset 多重新输入几次hexo d 即可   不是代码错误<br>是网络原因 热点会好一些</p>
 <p>评论系统<br>启用Valine必须先创建leancloud应用， 获取 id|key 填入即可<br>leancloud:<br>  enable: true<br>  app_id:<br>  app_key:<br>在leancloud创建好之后，直接在安全设置中找到网站并且在安全中心绑定。当时是有很长时间的延迟，现在可以了</p>
