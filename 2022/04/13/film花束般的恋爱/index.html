@@ -107,7 +107,7 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <div id="dplayer3" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer3"),"hotkey":true,"preload":"metadata","video":{"url":"https://video5194.oss-cn-beijing.aliyuncs.com/%E8%8A%B1%E6%9D%9F%E7%89%88%E7%9A%84%E6%81%8B%E7%88%B1.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script> 
+  <div id="dplayer0" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer0"),"hotkey":true,"preload":"metadata","video":{"url":"https://video5194.oss-cn-beijing.aliyuncs.com/%E8%8A%B1%E6%9D%9F%E7%89%88%E7%9A%84%E6%81%8B%E7%88%B1.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script> 
 
 
 <p>顾城有首著名的诗说，你不愿意种花。<br>你说，我不愿看见它，一点点凋落；是的 ，为了避免结束，你避免了一切开始。<br>花束适合用来比喻一切灿烂而短暂的东西，坂元裕二也是这么做的。<span id="more"></span></p>
@@ -198,19 +198,10 @@
    
   <nav class="article-nav">
     
+    
       <a href="/2022/04/13/film%E8%9C%98%E8%9B%9B%E4%BE%A0%E8%8B%B1%E9%9B%84%E6%97%A0%E5%BD%92/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            蜘蛛侠：英雄无归
-          
-        </div>
-      </a>
-    
-    
-      <a href="/2022/03/15/%E6%88%91%E4%B8%8D%E6%84%BF%E8%AE%A9%E4%BD%A0%E4%B8%80%E4%B8%AA%E4%BA%BA/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">我不愿让你一个人 —五月天</div>
+        <div class="article-nav-title">蜘蛛侠：英雄无归</div>
       </a>
     
   </nav>
@@ -639,42 +630,6 @@
 </style>
     
     
-<script>
-  const password = "123456";
-  const lock_password = window.sessionStorage.getItem("lock_password");
-  console.log(password, lock_password);
-  if (lock_password !== password) {
-    Swal.fire({
-      title: "请输入访问密码",
-      input: "text",
-      inputAttributes: {
-        autocapitalize: "off",
-      },
-      showCancelButton: false,
-      showLoaderOnConfirm: true,
-      allowOutsideClick: false,
-      confirmButtonText: "确定",
-    }).then((result) => {
-      console.log(result);
-      if (result.isConfirmed) {
-        console.log(password);
-        if (result.value === password) {
-          window.sessionStorage.setItem("lock_password", result.value);
-        } else {
-          Swal.fire({
-            icon: "error",
-            title: "密码错误，请重试",
-            confirmButtonText: "确定",
-            allowOutsideClick: false,
-          }).then(() => {
-            window.location.reload();
-          });
-        }
-      }
-    });
-  }
-</script>
-
 
   </div>
 </body>
