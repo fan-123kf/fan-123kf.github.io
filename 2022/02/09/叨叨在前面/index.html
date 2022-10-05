@@ -81,7 +81,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">1.2k</span>
+            <span class="post-count">1.3k</span>
         </span>
     </span>
 
@@ -105,8 +105,8 @@
        
   <p>网站大概每天都会登录维护，之前出了太多bug。<br>现在还是有这种情况，视频偶尔回播放失败qwq<br>长了教训，现在的操作都会写在更新日志里，本地和GitHub各一份，以防以后忘记<span id="more"></span></p>
 <p>开头感谢：<br>b站程序羊<br>github大佬 shen-yu</p>
-<p><strong>2022/4/13</strong><br>深夜更新<br>打完蓝桥有时间了。<br>这次更新增加了电影菜单，菜单，菜单。<br>在Ayer的config.yml里的meun加入  电影: /categories/film/<br>在source里加film文件夹，index的title也是film。<br>思路就是把categories里的电影拿出来搞成一个菜单，<br>不过有些词不能汉化，但是相信大家的浏览器。</p>
-<p>顺便实现了增加每个电影的评论区<br><strong>2022/2/22</strong><br>换了域名，当时买了一年的，不用怪可惜<br>leancloud在2.18日发了公告，华北节点共享域名被注册商停止解析<br>还好我买的阿里的 希望阿里的稳定一些<br>重新绑定了一个vanine安全地址，评论可以用了。测试已过。<br><strong>2022/2/17</strong><br>更了好几个视频 一生所爱真的是很绝，我浅薄的语言很难描述好<br>西湖 公路之歌 再见杰克 是今天更新的痛痒的歌<br>就像五月天是我心中流行乐队的top1<br>痛痒也是我心中摇滚乐队的top1<br>等有时间一定补上文案  痛痒：坚决落实，保护姑娘~</p>
+<p><strong>2022/10/5</strong><br>网站出bug了，现在又好了。<br>一开始的问题是hexo g时出现nodejs的问题，可能是有些.js文件被删掉了。重新安装了一遍工具包。<br>后来问题是hexo d时的连接问题，需要先输入config 这两行命令，然后和GitHub成功连接一次就可以了。<br>更新一个摄影栏，毕竟刚刚买了nikon d7100.<br><strong>2022/4/13</strong><br>深夜更新<br>打完蓝桥有时间了。<br>这次更新增加了电影菜单，菜单，菜单。<br>在Ayer的config.yml里的meun加入  电影: /categories/film/<br>在source里加film文件夹，index的title也是film。<br>思路就是把categories里的电影拿出来搞成一个菜单，<br>不过有些词不能汉化，但是相信大家的浏览器。</p>
+<p>顺便实现了增加每个电影的评论区<br><strong>2022/2/22</strong><br>换了域名，当时买了一年的，不用怪可惜<br>leancloud在2.18日发了公告，华北节点共享域名被注册商停止解析<br>还好我买的阿里的 希望阿里的稳定一些<br>重新绑定了一个vanine安全地址，评论可以用了。测试已过。<br><strong>2022/2/17</strong><br>更了好几个视频 一生所爱真的是很绝，我浅薄的语言很难描述好<br>西湖 公路之歌 再见杰克 是今天更新的痛痒的歌<br>就像五月天是我心中流行乐队的top1<br>痛痒也是我心中摇滚乐队的top1<br>等有时间一定补上文案 </p>
 <p>期间遇到了同时开两个GitHub的麻烦，本以为在本地搞两个文件夹就可<br>但是hexo d时冲突了，两个地址混乱了。<br>差一点又要痛失网站，还好是u盘备份了。<br>以后一定在有保障的前提下冒险</p>
 <p><strong>2022/2/10</strong><br>视频一天失效了好几次，太难搞了。我推测是服务器的原因，也就先不搞了。</p>
 <p>我还是弄明白了。<br>视频失效原因是，用dplayer插入的url是视频解析地址，<br>在从网页源码爬解析地址的时候，url里会加入一些参数构成防盗链。<br>防止移植，并且不定时使源码失效，导致视频频繁失效。<br>解决办法是，在首次解析视频时就把视频下载到本地。<br>然后上传到自建的云空间里，我选择了阿里云oss<br>在阿里云对象存储里买了半年的空间，在华北2建立一个bucket<br>然后从本地上传视频到oss，在文件acl里修改权限，从而去除掉防盗链的时间参数。<br>然后复制过url即可。不出意外的话，应该再也不会失效了。<br>而且没有水印。d=====(￣▽￣*)b</p>
